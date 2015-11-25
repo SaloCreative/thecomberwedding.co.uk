@@ -1,18 +1,41 @@
-# Created by https://www.gitignore.io
+# Application
+public_html/app/plugins/*
+!public_html/app/plugins/.gitkeep
+public_html/app/mu-plugins/*
+!public_html/app/mu-plugins/.gitkeep
+public_html/app/upgrade
+public_html/app/uploads/*
+!public_html/app/uploads/.gitkeep
+!public_html/app/mu-plugins/disallow-indexing.php
+!public_html/app/mu-plugins/register-theme-directory.php
+!public_html/app/mu-plugins/bedrock-autoloader.php
+config/environments/master.php
+public_html/app/themes/foundation-theme
+public_html/app/themes/foundation-theme/*
 
-### WordPress ###
-*.log
-sitemap.xml
-sitemap.xml.gz
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/wp-cache-config.php
-httpdocs/wp-content/uploads/
+# WordPress
+public_html/wp
+!public_html/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
 
 
 ### OSX ###
@@ -36,3 +59,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+.idea
