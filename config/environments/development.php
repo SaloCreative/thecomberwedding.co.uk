@@ -24,3 +24,6 @@ define('DB_HOST', 'localhost');
  * URLs & The name of the database for WordPress 
 */
 
+define('DB_NAME', 'thecomberwedding.co.uk');
+define('WP_HOME', 'http://local.thecomberwedding.co.uk');
+define('WP_SITEURL', 'http://local.thecomberwedding.co.uk/wp');
