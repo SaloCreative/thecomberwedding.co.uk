@@ -1,0 +1,73 @@
+@charset 'UTF-8';
+
+@import "../components/foundation/scss/normalize.scss";
+@import "site_settings";
+@import "../components/foundation/scss/foundation.scss";
+@import "foundation-icons.scss";
+
+
+//Add core site styles in here
+
+#primary {
+	padding-top: 20px;
+}
+
+//Images
+
+.wp-caption {
+	max-width: 100% !important;
+	p {
+		font-style: italic;
+		padding-top: 5px;
+	}
+	&.aligncenter {
+		margin: 0 auto;
+	}
+	&.alignleft {
+		margin: 8px auto 0;
+		float: left;
+		margin-right: 5px;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+	&.alignright {
+		margin: 8px auto 0;
+		float: right;
+		margin-left: 5px;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+	
+}
+img.alignright {
+	float: right;
+	margin: 8px auto 0;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+img.alignleft {
+	float: left;
+	margin: 8px auto 0;
+	margin-right: 15px;
+}
+
+
+//panel Defaulf fix {
+
+.panel {
+	&::after {
+		clear: both;
+		width: 100%;
+		clear: both;
+		display: block;
+		content: '';
+	}
+}
+
+//Shortcode default fixes 
+
+ul.accordion {
+	margin-left: 0;
+}
