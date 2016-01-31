@@ -10,18 +10,6 @@ if (file_exists($root_dir . '/.env')) {
     $dotenv->load();
 }
 $environment = getenv('WP_ENV');
-
-// Set environment based on hostname
-switch ($environment) {
-    case 'development':
-        $user = 'wordpress_user';
-        $pass = 'r263214c';
-        $dbname = 'thecomberwedding.co.uk';
-        break;
-
-    case 'production':
-    default:
-        $user = 'fruit2office';
-        $pass = 'r266%$e2dwDW3214c';
-        $dbname = 'fruit2office.co.uk';
-}
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASSWORD');
+$dbname = getenv('DB_NAME');

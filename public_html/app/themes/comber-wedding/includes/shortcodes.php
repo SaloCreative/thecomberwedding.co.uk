@@ -60,7 +60,7 @@ function button($params = array(), $content = null) {
 	extract(shortcode_atts(array(
 		'text' => 'Link Text',
 		'link' => '#',
-		'style'=> 'small',
+		'style'=> '',
 	), $params));
 	$button = '<a class="button '.$style.'" href="'.$link.'" title="'.$text.'">'.$text.'</a>';
 	return $button;
