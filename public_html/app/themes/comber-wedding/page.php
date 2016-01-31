@@ -18,8 +18,10 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 <div id="primary" class="row" data-equalizer>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div class="large-9 columns">
-		<?php get_template_part( 'content', 'page' ); ?>
-      	
+		<div class="panel">
+			<h1><?php the_title(); ?></h1>
+			<?php the_content(); ?>
+		</div>
 	</div>
 	<?php endwhile; ?>
 	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sidebar' ) ); ?>

@@ -1,7 +1,8 @@
-<div class="row">
-	<div class="columns large-12">
-		<div class="panel">
-			<p>&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+	<footer>
+		<div class="columns large-12">
+			<div class="panel">
+				<p>&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+			</div>
 		</div>
-	</div>
+	</footer>
 </div>

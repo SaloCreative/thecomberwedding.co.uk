@@ -1,14 +1,8 @@
 <?php if(!is_user_logged_in()) { header( 'Location: '.home_url('/login') ); die(); } ?>
-
-<div id="masthead" class="medium-hide-custom">
-	<div class="row">
-		<div class="large-6 medium-6 columns">
-			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<p><?php bloginfo( 'description' ); ?></p>
-		</div>
-		<div class="large-6 medium-6 columns">
-			<?php get_search_form(); ?>
-		</div>
-	</div>
-</div>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/nav') ); ?>
+<div id="body-wrapper" class="row">
+    <div id="masthead">
+        <div class="large-6 medium-6 columns">
+            <a class="logo" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+            <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/nav') ); ?>
+        </div>
+    </div>

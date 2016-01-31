@@ -12,7 +12,7 @@
  * @subpackage 	EWD Foundation Theme
  * @since 		1.0
  */
-
+header( 'Location: '.home_url() ); die();
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div id="primary" class="row blog-listing" data-equalizer>
 	<div class="large-9 columns">
