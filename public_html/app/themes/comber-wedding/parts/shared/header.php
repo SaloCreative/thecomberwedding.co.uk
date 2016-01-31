@@ -1,3 +1,5 @@
+<?php if(!is_user_logged_in()) { header( 'Location: '.home_url('/login') ); die(); } ?>
+
 <div id="masthead" class="medium-hide-custom">
 	<div class="row">
 		<div class="large-6 medium-6 columns">

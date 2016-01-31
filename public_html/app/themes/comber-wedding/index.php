@@ -12,8 +12,8 @@
  * @subpackage 	EWD Foundation Theme
  * @since 		1.0
  */
-?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+
+Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div id="primary" class="row blog-listing" data-equalizer>
 	<div class="large-9 columns">
       	<div class="panel" data-equalizer-watch>

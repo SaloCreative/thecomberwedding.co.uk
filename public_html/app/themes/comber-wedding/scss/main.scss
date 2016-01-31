@@ -4,9 +4,21 @@
 @import "site_settings";
 @import "../components/foundation/scss/foundation.scss";
 @import "foundation-icons.scss";
-
+@import url(https://fonts.googleapis.com/css?family=Bad+Script|Pacifico);
 
 //Add core site styles in here
+body {
+	font-size: 18px;
+	p {
+		font-size: 18px;
+	}
+}
+h1, h2 {
+	.panel & {
+		margin-bottom: 40px;
+	}
+	margin-bottom: 40px;
+}
 
 #primary {
 	padding-top: 20px;

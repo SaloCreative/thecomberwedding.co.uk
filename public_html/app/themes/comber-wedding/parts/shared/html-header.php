@@ -17,7 +17,6 @@
 			<script src="<?php echo get_template_directory_uri(); ?>/js/ie8-head.js"></script>
 		<![endif]-->
 		<script src="<?php echo get_template_directory_uri(); ?>/components/modernizr/modernizr.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,300,700' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

@@ -13,8 +13,8 @@
  * @subpackage 	EWD Foundation Theme
  * @since 		1.0
  */
-?>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+
+Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div id="primary" class="row" data-equalizer>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div class="large-9 columns">
