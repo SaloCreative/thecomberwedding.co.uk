@@ -1,0 +1,84 @@
+// header
+ul.main-navigation {
+  list-style: none;
+  margin: 0 0 0 40px;
+  li {
+    a {
+      display: block;
+      padding: 6px 0 0 55px;
+      line-height: 34px;
+      background-size: 30px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      font-size: 18px;
+      transition: all .3s linear;
+      margin-bottom: 10px;
+    }
+    &.menu-item-32 {
+      a {
+        background-image: url(../images/gallery.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/gallery-hov.png);
+        }
+      }
+    }
+    &.menu-item-24 {
+      a {
+        background-image: url(../images/gift.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/gift-hov.png);
+        }
+      }
+    }
+    &.menu-item-23 {
+      a {
+        background-image: url(../images/music.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/music-hov.png);
+        }
+      }
+    }
+    &.menu-item-25 {
+      a {
+        background-image: url(../images/rsvp.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/rsvp-hov.png);
+        }
+      }
+    }
+    &.menu-item-13 {
+      a {
+        background-image: url(../images/accom.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/accom-hov.png);
+        }
+      }
+    }
+    &.menu-item-14 {
+      a {
+        background-image: url(../images/home.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/home-hov.png);
+        }
+      }
+    }
+  }
+}

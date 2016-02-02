@@ -9,6 +9,8 @@
 //Add core site styles in here
 body {
 	font-size: 18px;
+	background: url(../images/background.jpg) no-repeat center top;
+	background-size: cover;
 	p {
 		font-size: 18px;
 	}
@@ -69,6 +71,11 @@ img.alignleft {
 //panel Defaulf fix {
 
 .panel {
+	background: rgba(255,255,255,0.95);
+	border: 1px solid #fff;
+	-webkit-box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 14px -1px rgba(0,0,0,0.75);
 	&::after {
 		clear: both;
 		width: 100%;
@@ -83,3 +90,5 @@ img.alignleft {
 ul.accordion {
 	margin-left: 0;
 }
+
+@import 'header';

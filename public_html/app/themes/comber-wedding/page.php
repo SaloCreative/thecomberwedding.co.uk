@@ -16,7 +16,7 @@ endif;
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 	<section id="primary">
-		<div class="large-6 columns">
+		<div class="large-8 columns">
 			<?php
 			if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<div class="panel">
@@ -24,7 +24,7 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 				</div>
 			<?php endwhile; ?>
 		</div>
-		<div class="large-6 columns">
+		<div class="large-4 columns">
 			<div class="panel">
 				Sidebar for photos
 				<?php
