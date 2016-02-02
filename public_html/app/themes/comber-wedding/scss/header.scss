@@ -82,3 +82,19 @@ ul.main-navigation {
     }
   }
 }
+
+//Header image
+
+.intro-image {
+  .panel {
+    padding: 0;
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    img {
+      width: 100%;
+    }
+  }
+}

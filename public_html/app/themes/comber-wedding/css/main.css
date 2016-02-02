@@ -6858,7 +6858,8 @@ th.hide-for-touch {
 body {
   font-size: 18px;
   background: url(../images/background.jpg) no-repeat center top;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   body p {
     font-size: 18px; }
 
@@ -6954,3 +6955,13 @@ ul.main-navigation {
     background-image: url(../images/home.png); }
   ul.main-navigation li.menu-item-14:hover a, ul.main-navigation li.menu-item-14.current-menu-item a {
     background-image: url(../images/home-hov.png); }
+
+.intro-image .panel {
+  padding: 0;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+  .intro-image .panel img {
+    width: 100%; }
