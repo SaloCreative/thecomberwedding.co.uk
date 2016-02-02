@@ -27,6 +27,17 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 		<div class="large-6 columns">
 			<div class="panel">
 				Sidebar for photos
+				<?php
+					$images = array();
+					array_push($images, get_field('image_one'), get_field('image_two'), get_field('image_three'));
+					foreach($images as $image) {
+                        if(!empty($image)) {
+                            echo '<br>image id is'.$image ;
+                        } else {
+                            echo '<br>no image';
+                        }
+                    }
+				?>
 			</div>
 		</div>
 	</section>
