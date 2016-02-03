@@ -14,9 +14,12 @@ add_shortcode('rsvp_widget', 'comber_rsvp_form');
 
 // RSVP form fields
 function comber_rsvp_form_build() {
-    ob_start(); ?>
+    ob_start();
+    require_once('guests.php');
+
+    ?>
         <div class="rsvp-wrapper">
-            <h2>User Group name</h2>
+            <h2><?= $groupName; ?></h2>
 
         </div>
     <?php
