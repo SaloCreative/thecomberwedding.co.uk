@@ -14,4 +14,5 @@ Version: 1.1
 require_once('login/form.php');
 require_once('login/process.php');
 require_once('errors/errors.php');
+require_once('guests/rsvp.php');
 
