@@ -10,6 +10,13 @@ try {
         foreach($data as $guestGroup) {
             $groupName = $guestGroup['name'];
             $groupID = $guestGroup['id'];
+            $guestData = $ftoDB->query('SELECT * FROM guests WHERE group_id ='.$groupID);
+            if ($guestData->rowCount() > 0) {
+                foreach ($guestData as $guest) {
+                    $name = $guest['name'];
+                    echo $name;
+                }
+            }
         }
     } else {
         $groupName =  'Not Found';
