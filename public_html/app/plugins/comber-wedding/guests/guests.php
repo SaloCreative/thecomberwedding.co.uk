@@ -7,14 +7,14 @@ try {
     $data = $ftoDB->query('SELECT * FROM guests_group WHERE user_id ='.$user_ID);
     //Check there are orders
     if ($data->rowCount() > 0) {
+        $guests = array();
         foreach($data as $guestGroup) {
             $groupName = $guestGroup['name'];
             $groupID = $guestGroup['id'];
             $guestData = $ftoDB->query('SELECT * FROM guests WHERE group_id ='.$groupID);
             if ($guestData->rowCount() > 0) {
                 foreach ($guestData as $guest) {
-                    $name = $guest['name'];
-                    echo $name;
+                    array_push($guests, $guest);
                 }
             }
         }

@@ -20,6 +20,15 @@ function comber_rsvp_form_build() {
     ?>
         <div class="rsvp-wrapper">
             <h2><?= $groupName; ?></h2>
+            <?php
+                foreach ($guests as $guest) {
+                    $name = $guest['name'];
+                    $rsvp = $guest['rsvp'];
+                    $starter = $guest['starter'];
+                    $main = $guest['main'];
+                    $dessert = $guest['dessert']; ?>
+            <?php }
+            ?>
 
         </div>
     <?php
