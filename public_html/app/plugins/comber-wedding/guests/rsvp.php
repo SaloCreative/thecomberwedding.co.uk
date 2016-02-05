@@ -20,15 +20,58 @@ function comber_rsvp_form_build() {
     ?>
         <div class="rsvp-wrapper">
             <h2><?= $groupName; ?></h2>
-            <?php
-                foreach ($guests as $guest) {
-                    $name = $guest['name'];
-                    $rsvp = $guest['rsvp'];
-                    $starter = $guest['starter'];
-                    $main = $guest['main'];
-                    $dessert = $guest['dessert']; ?>
-            <?php }
-            ?>
+            <div class="guests row">
+                <?php
+                    $rsvpStatus = array('0' => 'Not Responded...', '1' => 'Attending', '2' => 'Not Attending');
+                    foreach ($guests as $guest) {
+                        $name = $guest['name'];
+                        $rsvp = $guest['rsvp'];
+                        $starter = $guest['starter'];
+                        $main = $guest['main'];
+                        $dessert = $guest['dessert']; ?>
+                        <div class="guest">
+                            <div class="columns medium-3">
+                                <?= $name; ?>
+                            </div>
+                            <div class="columns medium-3">
+                                <select name="rsvp" required>
+                                    <option value=""><?= $rsvpStatus['0']; ?></option>
+                                    <option value="1" <?= ($rsvp === '1') ? 'selected' : '';?>><?= $rsvpStatus['1']; ?></option>
+                                    <option value="2" <?= ($rsvp === '2') ? 'selected' : '';?>><?= $rsvpStatus['2']; ?></option>
+                                </select>
+                            </div>
+                            <div class="columns medium-6">
+                                <div class="row">
+                                    <div class="columns small-4">
+                                        <select name="starter" required>
+                                            <option value="">Select a starter...</option>
+                                            <option value="1" <?= ($starter === '1') ? 'selected' : '';?>>Starter 1</option>
+                                            <option value="2" <?= ($starter === '2') ? 'selected' : '';?>>Starter 2</option>
+                                            <option value="3" <?= ($starter === '3') ? 'selected' : '';?>>Starter 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="columns small-4">
+                                        <select name="main" required>
+                                            <option value="">Select a main...</option>
+                                            <option value="1" <?= ($main === '1') ? 'selected' : '';?>>Starter 1</option>
+                                            <option value="2" <?= ($main === '2') ? 'selected' : '';?>>Starter 2</option>
+                                            <option value="3" <?= ($main === '3') ? 'selected' : '';?>>Starter 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="columns small-4">
+                                        <select name="dessert" required>
+                                            <option value="">Select a dessert...</option>
+                                            <option value="1" <?= ($dessert === '1') ? 'selected' : '';?>>Starter 1</option>
+                                            <option value="2" <?= ($dessert === '2') ? 'selected' : '';?>>Starter 2</option>
+                                            <option value="3" <?= ($dessert === '3') ? 'selected' : '';?>>Starter 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <?php }
+                ?>
+            </div>
 
         </div>
     <?php
