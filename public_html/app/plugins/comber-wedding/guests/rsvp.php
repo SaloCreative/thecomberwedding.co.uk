@@ -73,10 +73,15 @@ function comber_rsvp_form_build() {
                             </div>
                         </div>
                 <?php }
-                ?>
-                    <input type="hidden" name="userId" value="<?= get_current_user_id(); ?>" />
+                    //Pass user details to save action to crudely verify
+                    $current_user = wp_get_current_user();
+                    $userEmail = $current_user->user_login;
+                    $wpUser = $current_user->ID; ?>
+                    <input name="userId" value="<?= $wpUser; ?>" />
+                    <input name="userEmail" value="<?= $userEmail; ?>" />
+
                     <!-- TODO: Add proper wordpress Salt here -->
-                    <input type="hidden" name="rsvpNonce" value="<?= '12r23tu2fg239urt287rbc278vc2bvc7' ?>" />
+                    <input name="rsvpNonce" value="<?= '12r23tu2fg239urt287rbc278vc2bvc7' ?>" />
                     <input type="submit" class="button" value="RSVP" />
                 </form>
             </div>
