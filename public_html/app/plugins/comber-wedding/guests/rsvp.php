@@ -23,7 +23,7 @@ function comber_rsvp_form_build() {
             <div class="guests row">
                 <form id="rsvp-guests" action="<?= get_home_url(); ?>/app/plugins/comber-wedding/guests/rsvp-save.php" method="post">
                 <?php
-                    $rsvpStatus = array('0' => 'Not Responded...', '1' => 'Attending', '2' => 'Not Attending');
+                    include('app/plugins/comber-wedding/guests/menu-trans.php');
                     foreach ($guests as $guest) {
                         $name = $guest['name'];
                         $rsvp = $guest['rsvp'];
@@ -48,25 +48,25 @@ function comber_rsvp_form_build() {
                                     <div class="columns small-4">
                                         <select name="starter[]" required>
                                             <option value="">Select a starter...</option>
-                                            <option value="1" <?= ($starter === '1') ? 'selected' : '';?>>Starter 1</option>
-                                            <option value="2" <?= ($starter === '2') ? 'selected' : '';?>>Starter 2</option>
-                                            <option value="3" <?= ($starter === '3') ? 'selected' : '';?>>Starter 3</option>
+                                            <option value="1" <?= ($starter === '1') ? 'selected' : '';?>><?= $transStarter['1']; ?></option>
+                                            <option value="2" <?= ($starter === '2') ? 'selected' : '';?>><?= $transStarter['2']; ?></option>
+                                            <option value="3" <?= ($starter === '3') ? 'selected' : '';?>><?= $transStarter['3']; ?></option>
                                         </select>
                                     </div>
                                     <div class="columns small-4">
                                         <select name="main[]" required>
                                             <option value="">Select a main...</option>
-                                            <option value="1" <?= ($main === '1') ? 'selected' : '';?>>Starter 1</option>
-                                            <option value="2" <?= ($main === '2') ? 'selected' : '';?>>Starter 2</option>
-                                            <option value="3" <?= ($main === '3') ? 'selected' : '';?>>Starter 3</option>
+                                            <option value="1" <?= ($main === '1') ? 'selected' : '';?>><?= $transMain['1']; ?></option>
+                                            <option value="2" <?= ($main === '2') ? 'selected' : '';?>><?= $transMain['2']; ?></option>
+                                            <option value="3" <?= ($main === '3') ? 'selected' : '';?>><?= $transMain['3']; ?></option>
                                         </select>
                                     </div>
                                     <div class="columns small-4">
                                         <select name="dessert[]" required>
                                             <option value="">Select a dessert...</option>
-                                            <option value="1" <?= ($dessert === '1') ? 'selected' : '';?>>Starter 1</option>
-                                            <option value="2" <?= ($dessert === '2') ? 'selected' : '';?>>Starter 2</option>
-                                            <option value="3" <?= ($dessert === '3') ? 'selected' : '';?>>Starter 3</option>
+                                            <option value="1" <?= ($dessert === '1') ? 'selected' : '';?>><?= $transDessert['1']; ?></option>
+                                            <option value="2" <?= ($dessert === '2') ? 'selected' : '';?>><?= $transDessert['2']; ?></option>
+                                            <option value="3" <?= ($dessert === '3') ? 'selected' : '';?>><?= $transDessert['3']; ?></option>
                                         </select>
                                     </div>
                                 </div>

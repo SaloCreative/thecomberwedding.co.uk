@@ -27,13 +27,13 @@
             </div>
             <div class="columns medium-4">
                 <h3>Dessert</h3>
-                <h6>American style baked cheesecake</h6>
+                <h6>American Style Baked Cheesecake</h6>
                 <p>with bramley apple puree &amp; brown sugared pecans</p>
                 <hr>
-                <h6>Rich chocolate sabayon tart</h6>
+                <h6>Rich Chocolate Sabayon Tart</h6>
                 <p>with morello cherry jellies &amp; vanilla whipped mascarpone</p>
                 <hr>
-                <h6>Pear and vanilla crème Brûlée</h6>
+                <h6>Pear and Vanilla Crème Brûlée</h6>
                 <p>with almond and caramel macaroons</p>
             </div>
         </div>
