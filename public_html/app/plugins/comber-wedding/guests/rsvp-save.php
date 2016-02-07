@@ -25,8 +25,8 @@ if (!empty($_POST['rsvpNonce']) && !empty($_POST['userId']) && !empty($_POST['us
             $ftoDB = null;
         }
     }
+    header( 'Location: /rsvp?alert=true&success=rsvp');
 }
 else {
     header( 'Location: /rsvp?alert=true&failed=identify');
 }
-var_dump($_POST);

@@ -34,7 +34,7 @@ function comber_rsvp_form_build() {
                         <div class="guest">
                             <div class="columns medium-3">
                                 <?= $name; ?>
-                                <input name="guestId[]" value="<?= $guestID; ?>" />
+                                <input type="hidden" name="guestId[]" value="<?= $guestID; ?>" />
                             </div>
                             <div class="columns medium-3">
                                 <select name="rsvp[]" required>
@@ -77,11 +77,11 @@ function comber_rsvp_form_build() {
                     $current_user = wp_get_current_user();
                     $userEmail = $current_user->user_login;
                     $wpUser = $current_user->ID; ?>
-                    <input name="userId" value="<?= $wpUser; ?>" />
-                    <input name="userEmail" value="<?= $userEmail; ?>" />
+                    <input type="hidden" name="userId" value="<?= $wpUser; ?>" />
+                    <input type="hidden" name="userEmail" value="<?= $userEmail; ?>" />
 
                     <!-- TODO: Add proper wordpress Salt here -->
-                    <input name="rsvpNonce" value="<?= '12r23tu2fg239urt287rbc278vc2bvc7' ?>" />
+                    <input type="hidden" name="rsvpNonce" value="<?= '12r23tu2fg239urt287rbc278vc2bvc7' ?>" />
                     <input type="submit" class="button" value="RSVP" />
                 </form>
             </div>
