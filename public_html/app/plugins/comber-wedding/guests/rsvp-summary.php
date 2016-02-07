@@ -8,14 +8,16 @@
         $main = $guest['main'];
         $dessert = $guest['dessert'];
         $guestID = $guest['id']; ?>
-        <div class="guest">
+        <div class="guest row">
             <div class="columns medium-3">
                 <?= $name; ?>
             </div>
-            <div class="columns medium-3">
+            <?php if($rsvp !== '1') : ?>
+            <div class="columns medium-9">
                 <?= $rsvpStatus[$rsvp]; ?>
             </div>
-            <div class="columns medium-6">
+            <?php else: ?>
+            <div class="columns medium-9">
                 <div class="row">
                     <div class="columns small-4">
                         <?= $transStarter[$starter]; ?>
@@ -28,9 +30,10 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     <?php } ?>
     <div class="columns large-12">
-        <input type="submit" class="button" value="RSVP" />
+        <a class="button small" href="#" data-reveal-id="myRSVP">Edit RSVP</a>
     </div>
 </div>
