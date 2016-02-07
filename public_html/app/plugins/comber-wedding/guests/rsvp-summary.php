@@ -1,5 +1,5 @@
 <div class="columns large-12">
-    <p>Thank you for responding to our invite! You can see the details of your RSVP below along with your menu choices. You can change your meal choices up until 2 weeks prior to the wedding.</p>
+    <p>Thank you for responding to our invite! You can see the details of your RSVP below along with your menu choices.</p>
     <?php
     foreach ($guests as $guest) {
         $name = $guest['name'];
@@ -33,7 +33,5 @@
             <?php endif; ?>
         </div>
     <?php } ?>
-    <div class="columns large-12">
-        <a class="button small" href="#" data-reveal-id="myRSVP">Edit RSVP</a>
-    </div>
+    <a class="button small" href="#" data-reveal-id="myRSVP">Edit RSVP</a>
 </div>
