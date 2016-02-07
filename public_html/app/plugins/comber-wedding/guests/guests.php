@@ -11,6 +11,7 @@ try {
         foreach($data as $guestGroup) {
             $groupName = $guestGroup['name'];
             $groupID = $guestGroup['id'];
+            $groupResponse = $guestGroup['responded'];
             $guestData = $ftoDB->query('SELECT * FROM guests WHERE group_id ='.$groupID);
             if ($guestData->rowCount() > 0) {
                 foreach ($guestData as $guest) {
