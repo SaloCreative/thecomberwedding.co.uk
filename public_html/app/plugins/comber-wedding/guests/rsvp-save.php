@@ -25,7 +25,10 @@ if (!empty($_POST['rsvpNonce']) && !empty($_POST['userId']) && !empty($_POST['us
             $ftoDB = null;
         }
     }
-    header( 'Location: /rsvp?alert=true&success=rsvp');
+    $rsvpSet = 'UPDATE guests_group SET responded = 1 WHERE user_id = '.$wpUser;
+    $setRSVP = $ftoDB->prepare($rsvpSet);
+    $setRSVP->execute();
+   // header( 'Location: /rsvp?alert=true&success=rsvp');
 }
 else {
     header( 'Location: /rsvp?alert=true&failed=identify');
