@@ -15,9 +15,9 @@ if (!empty($_POST['rsvpNonce']) && !empty($_POST['userId']) && !empty($_POST['us
         $dessert = $_POST['dessert'][$index];
         // TODO: Ensure this user can respond for this guest
         try {
-            $rsvpInsert = 'UPDATE guests SET rsvp = '.$rsvp.', starter = '.$starter.', main = '.$main.', dessert = '.$dessert.' WHERE id = '.$guest;
+            $rsvpInsert = 'UPDATE guests SET rsvp = :rsvp, starter = :starter, main = :main, dessert = :dessert WHERE id = :guestID';
             $insertRSVP = $ftoDB->prepare($rsvpInsert);
-            $insertRSVP->execute();
+            $insertRSVP->execute(array('rsvp' => $rsvp, 'starter' => $starter, 'main' => $main, 'dessert' => $dessert, 'guestID' => $guest));
         }
         catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
