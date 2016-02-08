@@ -17,7 +17,7 @@
             <div class="columns medium-4">
                 <h3>Main</h3>
                 <h6>Confit Duck leg</h6>
-                <p>with gratin dauphinoise, carrot &amp; cardamom puree, fine green beans &amp; red wine sauce</p>
+                <p>gratin dauphinoise, carrot &amp; cardamom puree, green beans &amp; red wine sauce</p>
                 <hr>
                 <h6>28 Day Matured Striploin of Beef</h6>
                 <p>with oxtail croquette potato, pak choi, peas &amp; red wine sauce</p>
