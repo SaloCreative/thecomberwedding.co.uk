@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: RSVP
+ * Template Name: Admin pages
  *
  * @package WordPress
  * @subpackage comberwedding
  * @since 1.0
  */
-
+if (!isSiteAdmin() ){ header( 'Location: '.home_url() ); die(); }
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
     <section id="primary">

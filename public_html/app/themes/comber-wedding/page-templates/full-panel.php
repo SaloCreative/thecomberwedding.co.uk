@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
+ * Template Name: Full Panel
  *
  * @package WordPress
  * @subpackage comberwedding
