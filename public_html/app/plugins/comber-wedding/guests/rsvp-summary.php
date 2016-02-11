@@ -3,6 +3,7 @@
     <?php
     foreach ($guests as $guest) {
         $name = $guest['name'];
+        $surname = $guest['surname'];
         $rsvp = $guest['rsvp'];
         $starter = $guest['starter'];
         $main = $guest['main'];
@@ -10,7 +11,7 @@
         $guestID = $guest['id']; ?>
         <div class="guest row">
             <div class="columns medium-3">
-                <?= $name; ?>
+                <?= $name.' '.$surname; ?>
             </div>
             <?php if($rsvp !== '1') : ?>
             <div class="columns medium-9">

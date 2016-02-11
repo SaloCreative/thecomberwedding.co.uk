@@ -2,6 +2,7 @@
     <?php
     foreach ($guests as $guest) {
         $name = $guest['name'];
+        $surname = $guest['surname'];
         $rsvp = $guest['rsvp'];
         $starter = $guest['starter'];
         $main = $guest['main'];
@@ -9,7 +10,7 @@
         $guestID = $guest['id']; ?>
         <div class="guest">
             <div class="columns medium-3">
-                <?= $name; ?>
+                <?= $name.' '.$surname; ?>
                 <input type="hidden" name="guestId[]" value="<?= $guestID; ?>" />
             </div>
             <div class="columns medium-3">
