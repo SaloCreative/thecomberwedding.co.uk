@@ -16,8 +16,16 @@ function comber_admin_dash() {
 }
 add_shortcode('admin_options', 'comber_admin_dash');
 
-// RSVP form fields
+// Admin summary
 function comber_admin_options_build() {
     ob_start();
-    echo 'Admin Panel';
+    require_once('summary.php'); ?>
+    <div class="container">
+        <h2>Total Invited <em><?= $totalGuests ;?></em></h2>
+        <li>Attending(<?= $yesCount; ?>)</li>
+        <li>Not Attending(<?= $noCount; ?>)</li>
+        <li>Invited(<?= $waitCount; ?>)</li>
+    </div>
+    <?php
+    return ob_get_clean();
 }
