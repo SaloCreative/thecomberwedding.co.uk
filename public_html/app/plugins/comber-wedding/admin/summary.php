@@ -2,7 +2,7 @@
 require_once('app/plugins/comber-wedding/database/connect.php');
 
 try {
-    $data = $ftoDB->query('SELECT * FROM guests');
+    $data = $ftoDB->query('SELECT * FROM guests ORDER BY surname ASC');
     //Check for all guests
     $totalGuests = $data->rowCount();
     $guestsComing = array();
@@ -11,13 +11,12 @@ try {
     if ($data->rowCount() > 0) {
         foreach($data as $guest) {
             $rsvp = $guest['rsvp'];
-            $guestID = $guest['id'][0];
             if($rsvp == 1) {
-                array_push($guestsComing, $guestID);
+                array_push($guestsComing, $guest);
             } else if($rsvp == 2) {
-                array_push($guestsNotComing, $guestID);
+                array_push($guestsNotComing, $guest);
             } else {
-                array_push($guestsInvited, $guestID);
+                array_push($guestsInvited, $guest);
             }
         }
     } else {

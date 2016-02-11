@@ -29,14 +29,40 @@ function comber_admin_options_build() {
         </ul>
         <div class="tabs-content">
             <div class="content active" id="panel1">
-                <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+                <?php if($yesCount > 0) {
+                    foreach($guestsComing as $guestInd) {
+                        echo '
+                        <div class="columns medium-4 left">
+                            '.$guestInd['name'].' '.$guestInd['surname'].'
+                        </div>';
+                    }
+                } else {
+                    echo '<p>No responses yet...</p>';
+                }?>
             </div>
             <div class="content" id="panel2">
-                <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+                <?php if($noCount > 0) {
+                    foreach($guestsNotComing as $guestInd) {
+                        echo '
+                        <div class="columns medium-4 left">
+                            '.$guestInd['name'].' '.$guestInd['surname'].'
+                        </div>';
+                    }
+                } else {
+                    echo '<p>Everyone is coming so far...</p>';
+                }?>
             </div>
             <div class="content" id="panel3">
-                <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
-            </div>
+                <?php if($waitCount > 0) {
+                    foreach($guestsInvited as $guestInd) {
+                        echo '
+                        <div class="columns medium-4 left">
+                            '.$guestInd['name'].' '.$guestInd['surname'].'
+                        </div>';
+                    }
+                } else {
+                    echo '<p>Everyone has responded...</p>';
+                }?>              </div>
         </div>
     </div>
     <?php
