@@ -39,7 +39,7 @@ function comber_rsvp_summary() {
 
     if(is_user_logged_in()) {
         if (isSiteAdmin() ) {
-            $output = '<p>RSVP summary!</p>';
+            $output = comber_rsvp_summary_build();
         } else {
             $output = '<p>You are not an administrator!</p>';
         }
@@ -56,3 +56,4 @@ add_shortcode('admin_rsvp_status', 'comber_rsvp_summary');
 //Include the functions required by shortcodes
 
 require_once('functions/guest_full_summary.php');
+require_once('functions/rsvp_quick_summary.php');

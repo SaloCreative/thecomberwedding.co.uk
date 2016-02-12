@@ -3,7 +3,7 @@
 // Admin summary
 function comber_admin_summary_build() {
     ob_start();
-    require_once('guest_summary.php'); ?>
+    require('guest_summary.php'); ?>
     <div class="container">
         <h2>The Comber Wedding <em><?= $totalGuests ;?> invited</em></h2>
         <ul class="tabs" data-tab>

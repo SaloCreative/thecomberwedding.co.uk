@@ -1,5 +1,5 @@
 <?php
-require_once('app/plugins/comber-wedding/database/connect.php');
+require('app/plugins/comber-wedding/database/connect.php');
 
 try {
     $data = $ftoDB->query('SELECT * FROM guests ORDER BY surname ASC');
