@@ -1,31 +1,15 @@
 <?php
-// Admin Are dashboard
-function comber_admin_dash() {
-
-    if(is_user_logged_in()) {
-        if (isSiteAdmin() ) {
-            $output = comber_admin_options_build();
-        } else {
-            $output = '<p>You are not an administrator!</p>';
-        }
-    } else {
-        // could show some logged in user info here
-        $output = '<p>You need to log in!</p>';
-    }
-    return $output;
-}
-add_shortcode('admin_options', 'comber_admin_dash');
 
 // Admin summary
-function comber_admin_options_build() {
+function comber_admin_summary_build() {
     ob_start();
-    require_once('summary.php'); ?>
+    require_once('guest_summary.php'); ?>
     <div class="container">
-        <h2>Total Invited <em><?= $totalGuests ;?></em></h2>
+        <h2>The Comber Wedding <em><?= $totalGuests ;?> invited</em></h2>
         <ul class="tabs" data-tab>
-            <li class="tab-title active"><a href="#panel1">Attending (<?= $yesCount; ?>)</a></li>
-            <li class="tab-title"><a href="#panel2">Not Attending (<?= $noCount; ?>)</a></li>
-            <li class="tab-title"><a href="#panel3">Awaiting Response (<?= $waitCount; ?>)</a></li>
+            <li class="tab-title active"><a href="#panel1">Attending <em>(<?= $yesCount; ?>)</em></a></li>
+            <li class="tab-title"><a href="#panel2">Not Attending <em>(<?= $noCount; ?>)</em></a></li>
+            <li class="tab-title"><a href="#panel3">Awaiting Response <em>(<?= $waitCount; ?>)</em></a></li>
         </ul>
         <div class="tabs-content">
             <div class="content active" id="panel1">

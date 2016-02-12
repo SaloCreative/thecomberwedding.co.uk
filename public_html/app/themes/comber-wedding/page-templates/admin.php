@@ -19,11 +19,10 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
             <?php endwhile; ?>
         </div>
         <div class="medium-4 columns">
-            <div class="panel">
-               <h3>Admin area</h3>
-                <hr>
-                <?= do_shortcode('[invite_status]'); ?>
-            </div>
+            <?= do_shortcode('[admin_invite_action]'); ?>
+            <?= do_shortcode('[admin_rsvp_status]'); ?>
+            <?= do_shortcode('[admin_actions]'); ?>
+            <?= do_shortcode('[admin_nav]'); ?>
         </div>
     </section>
 
