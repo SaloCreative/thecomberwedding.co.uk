@@ -51,7 +51,39 @@ function comber_rsvp_summary() {
 }
 add_shortcode('admin_rsvp_status', 'comber_rsvp_summary');
 
+// Admin actions
+function comber_admin_actions() {
 
+    if(is_user_logged_in()) {
+        if (isSiteAdmin() ) {
+            $output = '<p>Admin Actions</p>';
+        } else {
+            $output = '<p>You are not an administrator!</p>';
+        }
+    } else {
+        // could show some logged in user info here
+        $output = '<p>You need to log in!</p>';
+    }
+    return $output;
+}
+add_shortcode('admin_actions', 'comber_admin_actions');
+
+// Admin Nav
+function comber_admin_nav() {
+
+    if(is_user_logged_in()) {
+        if (isSiteAdmin() ) {
+            $output = '<p>Admin Nav</p>';
+        } else {
+            $output = '<p>You are not an administrator!</p>';
+        }
+    } else {
+        // could show some logged in user info here
+        $output = '<p>You need to log in!</p>';
+    }
+    return $output;
+}
+add_shortcode('admin_nav', 'comber_admin_nav');
 
 //Include the functions required by shortcodes
 
