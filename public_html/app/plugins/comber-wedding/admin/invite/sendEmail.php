@@ -1,7 +1,5 @@
 <?php
 
-echo 'Mailing<br>';
-
 require '../../../../../vendor/autoload.php';
 use Mailgun\Mailgun;
 
@@ -11,12 +9,14 @@ use Mailgun\Mailgun;
 $mgClient = new Mailgun('key-58bdcb87c0c6277d258f41492c248312');
 $domain = "mg.thecomberwedding.co.uk";
 
+require('inviteEmailTemplate.php');
+
 # Make the call to the client.
 $result = $mgClient->sendMessage($domain, array(
     'from'    => 'Lotte & Rich Comber <invites@thecomberwedding.co.uk>',
     'to'      => $email,
     'subject' => 'You are invited to our Wedding!',
     'html'    => '<html>
-		'.$messageCompanyOutput.'
+		'.$messageInviteOutput.'
 	</html>'
 ));
