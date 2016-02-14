@@ -19,7 +19,7 @@ function comber_rsvp_form_build() {
     include('app/plugins/comber-wedding/guests/menu-trans.php');
     ?>
         <div class="rsvp-wrapper">
-            <h2><?= $groupName; ?></h2><a class="button small" href="#" data-reveal-id="myMenu">View Menu</a>
+            <h2><?= $groupName; ?></h2><a class="button menu-modal" href="#" data-reveal-id="myMenu">View Menu</a>
             <div class="guests row">
                 <?php if($groupResponse == 1) {
                     require_once('rsvp-summary.php'); ?>

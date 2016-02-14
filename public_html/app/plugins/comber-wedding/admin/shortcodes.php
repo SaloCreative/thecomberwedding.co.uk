@@ -22,7 +22,7 @@ function comber_invite_action() {
 
     if(is_user_logged_in()) {
         if (isSiteAdmin() ) {
-            $output = '<p>Invite action/status!</p>';
+            $output = comber_invite_action_build();
         } else {
             $output = '<p>You are not an administrator!</p>';
         }
@@ -89,3 +89,4 @@ add_shortcode('admin_nav', 'comber_admin_nav');
 
 require_once('functions/guest_full_summary.php');
 require_once('functions/rsvp_quick_summary.php');
+require_once('functions/invite_actions.php');
