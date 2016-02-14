@@ -18,7 +18,6 @@ try {
             }
             array_push($guests, $groupedGuests );
         }
-        var_dump($guests);
     } else {
         header( 'Location: /admin-area?alert=true&failed=noguestinvite');
     }

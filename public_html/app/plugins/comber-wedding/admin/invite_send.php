@@ -10,11 +10,18 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
     require_once('../database/identifyGuest.php');
     //generate list to mail to
     require_once('invite/guestList.php');
-    //include email and send stuff
+    foreach($guests as $guest) {
+        $groupId = $guest[0];
+        $email = $guest[1];
+        $names = $guest[2];
+        //include email and send stuff
+        require('invite/sendEmail.php');
+        //mark guest as invited in DB
+        require('invite/inviteGuestSent.php');
+    }
     //mark time sent in database
     //return success
 }
 else {
-    echo 'post invalid';
-    //header( 'Location: /admin-area?alert=true&failed=identify');
+    header( 'Location: /admin-area?alert=true&failed=identify');
 }
