@@ -9,6 +9,7 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
     //Validate user
     require_once('../database/identifyGuest.php');
     //generate list to mail to
+    require_once('invite/guestList.php');
     //include email and send stuff
     //mark time sent in database
     //return success
