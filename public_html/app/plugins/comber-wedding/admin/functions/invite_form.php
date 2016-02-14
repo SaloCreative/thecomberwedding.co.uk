@@ -11,7 +11,7 @@
         <input type="hidden" name="userEmail" value="<?= $userEmail; ?>" />
 
         <!-- TODO: Add proper wordpress Salt here -->
-        <input type="hidden" name="rsvpNonce" value="<?= '12r23tu2fg239urt287rbc278vc2bvc7' ?>" />
+        <input type="hidden" name="inviteNonce" value="<?= '12r23tu2erwhyetr863546g87%*&%^£fg239urt287rbc278vc2bvc7' ?>" />
         <input type="submit" class="button" value="Send Invites" />
     </form>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
