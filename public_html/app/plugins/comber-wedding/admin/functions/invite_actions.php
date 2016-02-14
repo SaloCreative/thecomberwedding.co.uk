@@ -7,9 +7,10 @@ function comber_invite_action_build() {
         <div class="panel">
             <h3>Admin actions</h3>
             <?php if($invitesSent) : ?>
-                Invites sent!!
+                <p><strong>Invites sent:</strong> <?= $invite_date; ?></p>
             <?php else : ?>
-                <a class="button" href="#">Send Invites</a>
+                <a class="button" href="#" data-reveal-id="myInvites">Send Invites</a>
+                <?php require('invite_form.php'); ?>
             <?php endif; ?>
         </div>
     </div>
