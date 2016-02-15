@@ -89,4 +89,4 @@ $messageInviteOutput = '
   </tr>
 </table>';
 
-echo '<html>'.$messageInviteOutput.'</html>';
+//echo '<html>'.$messageInviteOutput.'</html>';
