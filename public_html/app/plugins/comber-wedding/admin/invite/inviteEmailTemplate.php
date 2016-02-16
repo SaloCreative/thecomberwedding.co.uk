@@ -3,12 +3,15 @@
 $people = count($names);
 $i = 0;
 $messageInviteNames = '';
+
 foreach ($names as $name) {
-    $i++;
-    if($i < $people) {
-        $messageInviteNames .= '&nbsp;';
-    } else {
-       $messageInviteNames .= '&nbsp;&amp;&nbsp;';
+    if($people > 1) {
+        $i++;
+        if($i < $people) {
+            $messageInviteNames .= '&nbsp;';
+        } else {
+           $messageInviteNames .= '&nbsp;&amp;&nbsp;';
+        }
     }
     $messageInviteNames .= $name;
 }
