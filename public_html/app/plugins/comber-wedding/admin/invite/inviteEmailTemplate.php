@@ -1,5 +1,5 @@
 <?php
-/*
+
 $people = count($names);
 $i = 0;
 $messageInviteNames = '';
@@ -15,9 +15,10 @@ foreach ($names as $name) {
     }
     $messageInviteNames .= $name;
 }
-*/
+/*
 $messageInviteNames = 'Lotte &amp; Rich';
 $email = 'richcc@me.com';
+*/
 
 $messageInviteOutput = '
 <table width="609" border="0" cellspacing="0" cellpadding="0">

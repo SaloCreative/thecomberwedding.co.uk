@@ -19,7 +19,8 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
         //mark guest as invited in DB
         require('invite/inviteGuestSent.php');
     }
-    //mark time sent in database
+    //Mark in DB that all invites are sent
+    require('invite/invitesSent.php');
     //return success
 }
 else {
