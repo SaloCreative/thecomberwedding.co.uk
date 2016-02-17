@@ -11,7 +11,8 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
     foreach($guests as $guest) {
         $groupId = $guest[0];
         $email = $guest[1];
-        $names = $guest[2];
+        $names = $guest[3];
+        $authToken = $guest[2];
         //include email and send stuff
         require('invite/sendEmail.php');
         //mark guest as invited in DB
@@ -20,7 +21,7 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
     //Mark in DB that all invites are sent
     require('invite/invitesSent.php');
     //return success
-    header( 'Location: /admin-area?alert=true&success=invites');
+    //header( 'Location: /admin-area?alert=true&success=invites');
 }
 else {
     header( 'Location: /admin-area?alert=true&failed=identify');

@@ -66,7 +66,7 @@ $messageInviteOutput = '
                         </td>
                         <td width="294" style="font-family: Arial, Helvetica, sans-serif; color: #7c7c7c; font-size: 14px; background: #efefef; border-bottom: 1px solid #fff;">
                             Password<br>
-                            <a href="http://www.thecomberwedding.co.uk" target="_blank" style="color:#303f76; text-decoration: none;">password here</a>
+                            <a href="http://www.thecomberwedding.co.uk" target="_blank" style="color:#303f76; text-decoration: none;">'.$authToken.'</a>
                         </td>
                     </tr>
 				</table>
@@ -93,4 +93,4 @@ $messageInviteOutput = '
   </tr>
 </table>';
 
-//echo '<html>'.$messageInviteOutput.'</html>';
+echo '<html>'.$messageInviteOutput.'</html>';

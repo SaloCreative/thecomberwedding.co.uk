@@ -6,7 +6,7 @@ try {
         $guests = array();
         foreach($data as $guestGroup) {
             $groupedGuests = array();
-            array_push($groupedGuests, $guestGroup['id'], $guestGroup['email']);
+            array_push($groupedGuests, $guestGroup['id'], $guestGroup['email'], $guestGroup['login_token']);
             $guestData = $ftoDB->query('SELECT * FROM guests WHERE group_id ='.$guestGroup['id']);
             if ($guestData->rowCount() > 0) {
                 $groupedGuestsInd = array();
