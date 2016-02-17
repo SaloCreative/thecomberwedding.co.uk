@@ -1,6 +1,4 @@
 <div id="myMenu" class="reveal-modal" data-reveal aria-labelledby="Menu" aria-hidden="true" role="dialog">
-    <h2 id="modalTitle">Wedding Breakfast Menu</h2>
-    <p class="lead">Have a look at the delicious traets we have in store...</p>
     <div class="row">
         <div class="row">
             <div class="columns medium-4">
