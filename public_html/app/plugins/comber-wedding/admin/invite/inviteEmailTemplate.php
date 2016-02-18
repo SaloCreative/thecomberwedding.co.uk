@@ -62,11 +62,11 @@ $messageInviteOutput = '
                     <tr>
                         <td width="295" style="font-family: Arial, Helvetica, sans-serif; color: #7c7c7c; font-size: 14px; background: #efefef; border-bottom: 1px solid #fff; border-right: 1px solid #fff;">
                             Username<br>
-                            <a href="http://www.thecomberwedding.co.uk" target="_blank" style="color:#303f76; text-decoration: none;">'.$email.'</a>
+                            <a href="http://www.thecomberwedding.co.uk/login/?loginame='.$email.'" target="_blank" style="color:#303f76; text-decoration: none;">'.$email.'</a>
                         </td>
                         <td width="294" style="font-family: Arial, Helvetica, sans-serif; color: #7c7c7c; font-size: 14px; background: #efefef; border-bottom: 1px solid #fff;">
                             Password<br>
-                            <a href="http://www.thecomberwedding.co.uk" target="_blank" style="color:#303f76; text-decoration: none;">'.$authToken.'</a>
+                            <strong>'.$authToken.'</strong>
                         </td>
                     </tr>
 				</table>

@@ -1,6 +1,6 @@
 <?php
     $username = '';
-    if(!empty($_GET['token'])) {
-        $userstring = $_GET['token'];
+    if(!empty($_GET['loginame'])) {
+        $username = $_GET['loginame'];
     }
 ?>
