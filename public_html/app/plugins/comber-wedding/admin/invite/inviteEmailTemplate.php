@@ -43,7 +43,7 @@ $messageInviteOutput = '
                     <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#231f20">Dear '.$messageInviteNames.'</p>
 
                     <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#231f20">You&#39;re invited to witness the marriage of <em>Charlotte Marie Harris</em> and <em>Richard Charles Comber</em> on the 4th June 2016 at 2pm.</p>
-                    <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#231f20">We would love for you to be there. You can find all you need to know at <a href="http://www.thecomberwedding.co.uk" style="color:#303f76; text-decoration: none;">www.thecomberwedding.co.uk</a>. On the website you will be able to RSVP and pick your menu choices. You will also find really useful information about local hotels, the venue, the dress code for the day and our gift list.</p>
+                    <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#231f20">We would love for you to be there. You can find all you need to know at <a href="http://www.thecomberwedding.co.uk/login/?loginame='.$email.'" style="color:#303f76; text-decoration: none;">www.thecomberwedding.co.uk</a>. On the website you will be able to RSVP and pick your menu choices. You will also find really useful information about local hotels, the venue, the dress code for the day and our gift list.</p>
                     <p style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#231f20">To access the site you will need to use the login details below: <br><br></p>
 			    </span>
             </font>
