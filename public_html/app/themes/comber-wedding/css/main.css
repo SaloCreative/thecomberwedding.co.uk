@@ -6965,3 +6965,26 @@ ul.main-navigation {
   box-shadow: none; }
   .intro-image .panel img {
     width: 100%; }
+
+.rsvp-wrapper {
+  position: relative; }
+
+.menu-modal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0 15px;
+  line-height: 37px; }
+
+#myMenu h6 {
+  font-size: 1.2rem; }
+
+#rsvp-guests .button {
+  padding: 0 60px;
+  line-height: 40px; }
+#rsvp-guests .guest {
+  clear: both; }
+#rsvp-guests small {
+  font-family: Arial, sans-serif;
+  font-size: 10px; }

@@ -1,4 +1,4 @@
-<form id="rsvp-guests" action="<?= get_home_url(); ?>/app/plugins/comber-wedding/guests/rsvp-save.php" method="post">
+<form id="rsvp-guests" action="<?= get_home_url(); ?>/app/plugins/comber-wedding/guests/rsvp-save.php" method="post" data-abide autocomplete="off">
     <?php
     foreach ($guests as $guest) {
         $name = $guest['name'];
@@ -19,6 +19,7 @@
                     <option value="1" <?= ($rsvp === '1') ? 'selected' : '';?>><?= $rsvpStatus['1']; ?></option>
                     <option value="2" <?= ($rsvp === '2') ? 'selected' : '';?>><?= $rsvpStatus['2']; ?></option>
                 </select>
+                <small class="error">Please tell us whether you are attending</small>
             </div>
             <div class="columns medium-6">
                 <div class="row">
@@ -29,6 +30,7 @@
                             <option value="2" <?= ($starter === '2') ? 'selected' : '';?>><?= $transStarter['2']; ?></option>
                             <option value="3" <?= ($starter === '3') ? 'selected' : '';?>><?= $transStarter['3']; ?></option>
                         </select>
+                        <small class="error">Select a starter</small>
                     </div>
                     <div class="columns small-4">
                         <select name="main[]" required>
@@ -37,6 +39,7 @@
                             <option value="2" <?= ($main === '2') ? 'selected' : '';?>><?= $transMain['2']; ?></option>
                             <option value="3" <?= ($main === '3') ? 'selected' : '';?>><?= $transMain['3']; ?></option>
                         </select>
+                        <small class="error">Select a main</small>
                     </div>
                     <div class="columns small-4">
                         <select name="dessert[]" required>
@@ -45,6 +48,7 @@
                             <option value="2" <?= ($dessert === '2') ? 'selected' : '';?>><?= $transDessert['2']; ?></option>
                             <option value="3" <?= ($dessert === '3') ? 'selected' : '';?>><?= $transDessert['3']; ?></option>
                         </select>
+                        <small class="error">Select a dessert</small>
                     </div>
                 </div>
             </div>
