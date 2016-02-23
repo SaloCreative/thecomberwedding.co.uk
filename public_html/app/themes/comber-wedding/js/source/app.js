@@ -5,13 +5,13 @@ $( document ).ready(function() {
        var $textarea = $container.find('textarea');
        var $fallback = $container.find('input');
        if($this.hasClass('added')) {
-           $textarea.slideUp();
            $this.removeClass('added');
-           $fallback.removeAttr('disabled');
+           $textarea.attr('disabled', 'disabled');
+           $textarea.slideUp();
        } else {
            $textarea.slideDown();
            $this.addClass('added');
-           $fallback.attr('disabled', 'disabled');
+           $textarea.removeAttr('disabled');
        }
    });
    $('select.rsvp').on('change', function() {
@@ -21,7 +21,11 @@ $( document ).ready(function() {
        var $fieldset = $container.find('fieldset');
        if($rsvp == '1') {
            $fieldset.slideDown();
+           $fieldset.removeAttr('disabled');
+           $fieldset.find('select').removeAttr('disabled');
        } else {
+           $fieldset.attr('disabled', 'disabled');
+           $fieldset.find('select').attr('disabled', 'disabled');
            $fieldset.slideUp();
        }
    });
