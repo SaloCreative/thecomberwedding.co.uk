@@ -21,10 +21,10 @@
                 </select>
                 <small class="error">Are you coming?</small>
             </div>
-            <fieldset disabled>
+            <fieldset <?= ($rsvp !== '1') ? 'disabled' : 'style="display:block"';?>>
                 <legend>Menu choices</legend>
                 <div class="columns medium-4">
-                    <select name="starter[]" required disabled>
+                    <select name="starter[]" required <?= ($rsvp !== '1') ? 'disabled' : '';?>>
                         <option value="">Select a starter...</option>
                         <option value="1" <?= ($starter === '1') ? 'selected' : '';?>><?= $transStarter['1']; ?></option>
                         <option value="2" <?= ($starter === '2') ? 'selected' : '';?>><?= $transStarter['2']; ?></option>
@@ -33,7 +33,7 @@
                     <small class="error">Select a starter</small>
                 </div>
                 <div class="columns medium-4">
-                    <select name="main[]" required disabled>
+                    <select name="main[]" required <?= ($rsvp !== '1') ? 'disabled' : '';?>>
                         <option value="">Select a main...</option>
                         <option value="1" <?= ($main === '1') ? 'selected' : '';?>><?= $transMain['1']; ?></option>
                         <option value="2" <?= ($main === '2') ? 'selected' : '';?>><?= $transMain['2']; ?></option>
@@ -42,7 +42,7 @@
                     <small class="error">Select a main</small>
                 </div>
                 <div class="columns medium-4">
-                    <select name="dessert[]" required disabled>
+                    <select name="dessert[]" required <?= ($rsvp !== '1') ? 'disabled' : '';?>>
                         <option value="">Select a dessert...</option>
                         <option value="1" <?= ($dessert === '1') ? 'selected' : '';?>><?= $transDessert['1']; ?></option>
                         <option value="2" <?= ($dessert === '2') ? 'selected' : '';?>><?= $transDessert['2']; ?></option>
