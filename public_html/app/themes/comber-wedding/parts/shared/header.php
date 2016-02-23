@@ -15,7 +15,7 @@ endif;?>
                     <p class="intro">You are invited to...</p>
                     <h1>The Comber Wedding!</h1>
                     <p class="date">Saturday 4th June 2016</p>
-                    <p class="local">2pm at The Sanbanks Hotel</p>
+                    <p class="local">2pm at The Sandbanks Hotel</p>
                 </div>
             </div>
         </div>

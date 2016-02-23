@@ -7005,7 +7005,70 @@ ul.main-navigation {
   padding: 0 60px;
   line-height: 40px; }
 #rsvp-guests .guest {
-  clear: both; }
+  clear: both;
+  padding-top: 20px; }
+  #rsvp-guests .guest:before, #rsvp-guests .guest:after {
+    content: " ";
+    display: table; }
+  #rsvp-guests .guest:after {
+    clear: both; }
+  #rsvp-guests .guest:first-child {
+    padding-top: 0px; }
 #rsvp-guests small {
   font-family: Arial, sans-serif;
   font-size: 10px; }
+#rsvp-guests select {
+  font-family: Arial, sans-serif;
+  font-size: 13px; }
+#rsvp-guests .guest-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0; }
+#rsvp-guests fieldset {
+  display: none;
+  padding: 1.25rem .9375rem 0;
+  margin: 1.125rem .9375rem; }
+#rsvp-guests input[type=submit] {
+  margin-top: 20px; }
+
+.notes-field textarea {
+  display: none;
+  font-family: Arial, sans-serif; }
+.notes-field .add-note {
+  position: relative;
+  display: block;
+  float: left;
+  padding-left: 45px;
+  line-height: 30px;
+  cursor: pointer;
+  padding-bottom: 20px; }
+  .notes-field .add-note::before {
+    position: absolute;
+    background: #eaeaea;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    content: "\f199";
+    font-family: "foundation-icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: inherit;
+    text-align: center;
+    font-size: 22px;
+    color: #ccc;
+    transition: all 0.3s linear; }
+  .notes-field .add-note:hover::before {
+    color: #fff;
+    background: #303f76; }
+  .notes-field .add-note.added::before {
+    opacity: 0.4;
+    content: "\f176";
+    color: #fff;
+    background: #f04124; }
+  .notes-field .add-note:hover::before {
+    opacity: 0.7; }

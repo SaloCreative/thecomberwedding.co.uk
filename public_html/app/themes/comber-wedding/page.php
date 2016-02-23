@@ -1,7 +1,5 @@
 <?php
 /**
- * Template Name: Home Page
- *
  * @package WordPress
  * @subpackage comberwedding
  * @since 1.0
