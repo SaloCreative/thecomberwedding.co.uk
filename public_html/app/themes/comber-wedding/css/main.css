@@ -7092,3 +7092,12 @@ ul.main-navigation {
   box-shadow: none;
   padding: 10px;
   background: #eaeaea; }
+
+#sidebar-images img {
+  padding-bottom: 25px; }
+
+.panel {
+  margin-bottom: 30px; }
+
+ul li {
+  font-size: 20px; }

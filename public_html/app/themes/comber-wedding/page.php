@@ -22,21 +22,16 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 				</div>
 			<?php endwhile; ?>
 		</div>
-		<div class="large-4 columns">
-			<div class="panel">
-				Sidebar for photos
+		<div class="large-4 columns" id="sidebar-images">
 				<?php
 					$images = array();
-					array_push($images, get_field('image_one'), get_field('image_two'), get_field('image_three'));
+					array_push($images, get_field('image_one'), get_field('image_two'), get_field('image_three'), get_field('image_four'));
 					foreach($images as $image) {
                         if(!empty($image)) {
-                            echo '<br>image id is'.$image ;
-                        } else {
-                            echo '<br>no image';
+							echo wp_get_attachment_image($image, 'original');
                         }
                     }
 				?>
-			</div>
 		</div>
 	</section>
 
