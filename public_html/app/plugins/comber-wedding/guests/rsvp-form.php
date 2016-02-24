@@ -7,7 +7,8 @@
         $starter = $guest['starter'];
         $main = $guest['main'];
         $dessert = $guest['dessert'];
-        $guestID = $guest['id']; ?>
+        $guestID = $guest['id'];
+        $notes = $guest['notes'];?>
         <div class="guest" id="guest-<?= $guestID; ?>">
             <div class="columns medium-4">
                 <p class="guest-name"><?= $name.' '.$surname; ?></p>
@@ -51,8 +52,8 @@
                     <small class="error">Select a dessert</small>
                 </div>
                 <div class="columns medium-12 notes-field right">
-                    <div class="add-note">Dietary requirements or note</div>
-                    <textarea name="notes[]" placeholder="Dietary requirements or notes" disabled></textarea>
+                    <div class="add-note <?= (!empty($notes)) ? 'added' : '';?>">Dietary requirements or note</div>
+                    <textarea name="notes[]" placeholder="Dietary requirements or notes" <?= (!empty($notes)) ? 'style="display:block;"' : 'disabled';?>><?= $notes; ?></textarea>
                 </div>
             </fieldset>
         </div>

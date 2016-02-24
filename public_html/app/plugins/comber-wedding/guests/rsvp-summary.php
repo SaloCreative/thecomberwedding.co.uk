@@ -9,28 +9,24 @@
         $main = $guest['main'];
         $dessert = $guest['dessert'];
         $guestID = $guest['id']; ?>
-        <div class="guest row">
-            <div class="columns medium-3">
-                <?= $name.' '.$surname; ?>
+        <div class="guest row rsvp-summary">
+            <div class="columns medium-4">
+                <p class="guest-name"><?= $name.' '.$surname; ?></p>
             </div>
-            <?php if($rsvp !== '1') : ?>
-            <div class="columns medium-9">
-                <?= $rsvpStatus[$rsvp]; ?>
+
+            <div class="columns medium-8">
+                <p class="rsvp-status"><?= $rsvpStatus[$rsvp]; ?></p>
             </div>
-            <?php else: ?>
-            <div class="columns medium-9">
-                <div class="row">
-                    <div class="columns small-4">
-                        <?= $transStarter[$starter]; ?>
-                    </div>
-                    <div class="columns small-4">
-                        <?= $transMain[$main]; ?>
-                    </div>
-                    <div class="columns small-4">
-                        <?= $transDessert[$dessert]; ?>
-                    </div>
+            <?php if($rsvp == '1') : ?>
+                <div class="columns medium-4">
+                    <div class="panel"><?= $transStarter[$starter]; ?></div>
                 </div>
-            </div>
+                <div class="columns medium-4">
+                    <div class="panel"><?= $transMain[$main]; ?></div>
+                </div>
+                <div class="columns medium-4">
+                    <div class="panel"><?= $transDessert[$dessert]; ?></div>
+                </div>
             <?php endif; ?>
         </div>
     <?php } ?>
