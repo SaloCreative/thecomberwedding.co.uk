@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Fifty Fifty
+ * Template Name: Default (Sidebar)
  *
  * @package WordPress
  * @subpackage comberwedding
@@ -16,7 +16,7 @@ endif;
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
     <section id="primary">
-        <div class="large-6 columns">
+        <div class="large-8 columns">
             <?php
             if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <div class="panel">
@@ -24,19 +24,9 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
                 </div>
             <?php endwhile; ?>
         </div>
-        <div class="large-6 columns">
+        <div class="large-4 columns">
             <div class="panel">
-
-                <?php
-                $images = array();
-                array_push($images, get_field('image_one'), get_field('image_two'), get_field('image_three'));
-                foreach($images as $image) {
-                    if(!empty($image)) {
-                        echo '<br>image id is'.$image ;
-                    }
-                }
-                the_field('rsvp_sidebar');
-                ?>
+                <? the_field('sidebar'); ?>
             </div>
         </div>
     </section>

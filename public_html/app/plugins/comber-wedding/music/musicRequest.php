@@ -1,5 +1,5 @@
 <?php
-// User RSVP form
+// User Request form
 function comber_music_form() {
 
     if(is_user_logged_in()) {
