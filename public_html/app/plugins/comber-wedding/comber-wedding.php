@@ -16,6 +16,7 @@ require_once('login/process.php');
 require_once('errors/errors.php');
 require_once('guests/rsvp.php');
 require_once('admin/shortcodes.php');
+require_once('music/musicRequest.php');
 
 function isSiteAdmin(){
     $currentUser = wp_get_current_user();

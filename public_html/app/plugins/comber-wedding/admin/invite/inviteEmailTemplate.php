@@ -23,13 +23,9 @@ $email = 'richcc@me.com';
 $messageInviteOutput = '
 <table width="609" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
     <td><table width="609" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="285"><a href="http://www.fruit2office.co.uk/" target="_blank"><img src="http://www.fruit2office.co.uk/EmailImages/logo.gif" alt="Fruit2Office" width="285" height="100" border="0" style="display:block" /></a></td>
-        <td width="324" style="text-align: right; font-family: Arial, Helvetica, sans-serif; color: #ccc; font-size: 20px;">You&#39;re invited...</td></td>
+        <td width="609"><a href="http://www.fruit2office.co.uk/" target="_blank"><img src="http://local.thecomberwedding.co.uk/Email/header.jpg" alt="Fruit2Office" width="609" border="0" style="display:block" /></a></td>
       </tr>
     </table></td>
   </tr>

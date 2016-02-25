@@ -1,4 +1,4 @@
-<form id="rsvp-guests" action="<?= get_home_url(); ?>/app/plugins/comber-wedding/guests/rsvp-save.php" method="post" data-abide autocomplete="off">
+<form id="rsvp-guests" action="<?= plugins_url(); ?>/comber-wedding/guests/rsvp-save.php" method="post" data-abide autocomplete="off">
     <?php
     foreach ($guests as $guest) {
         $name = $guest['name'];

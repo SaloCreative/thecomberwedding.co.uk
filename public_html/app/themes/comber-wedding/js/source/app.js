@@ -24,4 +24,22 @@ $( document ).ready(function() {
            $fieldset.slideUp();
        }
    });
+
+    // Add new music choice =================
+    var $musicWrapper = $('.form-field-insert');
+
+    $('.add-new-row').click(function() {
+        var $clonedField = $( 'div.music-insert' ).clone();
+        $clonedField.find('input.song, input.artist').val('');
+        $clonedField.appendTo( '.form-field-insert' ).removeClass('music-insert');
+    });
+
+    // Remove choice =========================
+
+    $musicWrapper.on('click', '.remove-row',  function() {
+        var $this = $(this);
+        var $removeThis = $(this).closest('div.row');
+        $removeThis.remove();
+    });
+
 });

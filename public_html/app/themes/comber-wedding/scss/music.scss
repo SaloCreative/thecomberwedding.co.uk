@@ -1,0 +1,96 @@
+//Music
+
+.add-new-row {
+  position: relative;
+  display: block;
+  float: left;
+  padding-left: 45px;
+  line-height: 30px;
+  cursor: pointer;
+  padding-bottom: 20px;
+  &::before {
+    position: absolute;
+    background: #eaeaea;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    content: "\f199";
+    font-family: "foundation-icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: inherit;
+    text-align: center;
+    font-size: 22px;
+    color: #ccc;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    &::before {
+      color: #fff;
+      background: $primary-color;
+    }
+  }
+}
+
+.form-field-insert .row {
+  .column:last-of-type {
+    padding-right: 60px;
+    padding-left: 0;
+  }
+  position: relative;
+  .remove-row {
+    position: absolute;
+    display: block;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    right: 15px;
+    cursor: pointer;
+    top: 0px;
+    &::before {
+      position: absolute;
+      background: #eaeaea;
+      cursor: pointer;
+      left: 0;
+      top: 0;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      content: "\f176";
+      font-family: "foundation-icons";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: inherit;
+      text-align: center;
+      font-size: 22px;
+      color: #ccc;
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      &::before {
+        color: #fff;
+        background: #f04124;
+      }
+    }
+  }
+  &:first-of-type {
+    .remove-row {
+      display: none;
+    }
+  }
+}
+.music-wrapper {
+  input.button {
+    clear: both;
+    float: left;
+  }
+  @include clearfix;
+}
