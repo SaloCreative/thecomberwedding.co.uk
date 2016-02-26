@@ -46,7 +46,8 @@
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.4.*",
     "wpackagist-plugin/advanced-custom-fields": "4.4.*",
-    "mailgun/mailgun-php": "~1.7.2"
+    "mailgun/mailgun-php": "~1.7.2",
+    "intervention/image": "^2.3"
   },
   "extra": {
     "installer-paths": {

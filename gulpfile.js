@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
         }))
         .on('error', swallowError)
         .pipe(concat('app.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(dest.javascript))
         .pipe(notify({title: "Browserify complete", message: "Javascript is now compiled"}))
         .pipe(livereload());

@@ -13,6 +13,12 @@ public_html/app/uploads/*
 config/environments/master.php
 public_html/app/themes/foundation-theme
 public_html/app/themes/foundation-theme/*
+public_html/assets/*
+!public_html/assets/.gitkeep
+!public_html/assets/thumbs/.gitkeep
+!public_html/assets/gallery/.gitkeep
+!public_html/assets/originals/.gitkeep
+
 
 # WordPress
 public_html/wp

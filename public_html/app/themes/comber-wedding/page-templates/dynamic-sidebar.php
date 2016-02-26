@@ -15,17 +15,22 @@ endif;
 
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-    <section id="primary">
+    <section id="primary" data-equalizer>
         <div class="large-8 columns">
             <?php
             if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-                <div class="panel">
+                <div class="panel" data-equalizer-watch>
                     <?php the_content(); ?>
+                    <form action="<?= plugins_url();?>/comber-wedding/gallery/upload.php" class="dropzone" id="myWeddingGallery">
+                        <div class="fallback">
+                            <input name="file" type="file" multiple />
+                        </div>
+                    </form>
                 </div>
             <?php endwhile; ?>
         </div>
         <div class="large-4 columns">
-            <div class="panel">
+            <div class="panel" data-equalizer-watch>
                 <? the_field('sidebar'); ?>
             </div>
         </div>

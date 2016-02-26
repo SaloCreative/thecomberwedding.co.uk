@@ -94,3 +94,14 @@
   }
   @include clearfix;
 }
+.request-feed {
+  padding-top: 20px;
+  p {
+    margin: 0;
+    padding: 5px 10px;
+    background: #eaeaea;
+    &:nth-child(even) {
+      background: #fff;
+    }
+  }
+}
