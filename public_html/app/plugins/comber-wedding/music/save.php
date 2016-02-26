@@ -18,7 +18,8 @@ if (!empty($_POST['musicNonce']) && !empty($_POST['userId']) && !empty($_POST['u
             header( 'Location: /music?alert=true&success=save');
         }
         catch(PDOException $e) {
-            header( 'Location: /music?alert=true&failed=save');
+            echo "Error: " . $e->getMessage();
+            $ftoDB = null;
         }
     }
 } else {
