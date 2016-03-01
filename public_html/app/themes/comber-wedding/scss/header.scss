@@ -49,23 +49,23 @@ ul.main-navigation {
     }
     &.menu-item-25 {
       a {
+        background-image: url(../images/rsvp-new.png);
+      }
+      &:hover,
+      &.current-menu-item{
+        a {
+          background-image: url(../images/rsvp-new-hov.png);
+        }
+      }
+    }
+    &.menu-item-13 {
+      a {
         background-image: url(../images/rsvp.png);
       }
       &:hover,
       &.current-menu-item{
         a {
           background-image: url(../images/rsvp-hov.png);
-        }
-      }
-    }
-    &.menu-item-13 {
-      a {
-        background-image: url(../images/accom.png);
-      }
-      &:hover,
-      &.current-menu-item{
-        a {
-          background-image: url(../images/accom-hov.png);
         }
       }
     }
@@ -79,6 +79,17 @@ ul.main-navigation {
           background-image: url(../images/home-hov.png);
         }
       }
+    }
+    &.logout {
+      a {
+        background-image: url(../images/logout.png);
+      }
+      &:hover {
+        a {
+          background-image: url(../images/logout-hov.png);
+        }
+      }
+
     }
   }
 }

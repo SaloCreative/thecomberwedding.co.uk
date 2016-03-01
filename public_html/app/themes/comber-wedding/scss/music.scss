@@ -93,6 +93,15 @@
     float: left;
   }
   @include clearfix;
+  form {
+    small.error {
+      font-family: Arial,sans-serif;
+      font-size: 10px;
+    }
+    input[type=text] {
+      font-family: Arial,sans-serif;
+    }
+  }
 }
 .request-feed {
   padding-top: 20px;

@@ -61,8 +61,9 @@ function button($params = array(), $content = null) {
 		'text' => 'Link Text',
 		'link' => '#',
 		'style'=> '',
+		'target' => '_self'
 	), $params));
-	$button = '<a class="button '.$style.'" href="'.$link.'" title="'.$text.'">'.$text.'</a>';
+	$button = '<a class="button '.$style.'" href="'.$link.'" title="'.$text.'" target="'.$target.'">'.$text.'</a>';
 	return $button;
 }
 

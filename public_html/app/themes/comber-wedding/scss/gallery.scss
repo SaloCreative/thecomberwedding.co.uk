@@ -1,0 +1,17 @@
+#myGallery {
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+}
+
+.reveal-modal .close-reveal-modal {
+  border-radius: 50%;
+  background: $primary-color;
+  width: 40px;
+  text-align: center;
+  right: -10px;
+  top: -10px;
+  padding: 0;
+  height: 40px;
+  line-height: 33px;
+  color:#fff;
+}

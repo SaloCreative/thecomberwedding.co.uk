@@ -59,5 +59,6 @@ Dropzone.options.myWeddingGallery = {
         else { done(); }
     },
     addRemoveLinks: false,
-    acceptedFiles: '.jpg,.JPG,.jpeg,.png,.gif'
+    acceptedFiles: '.jpg,.JPG,.jpeg,.png,.gif',
+    dictDefaultMessage: 'Drop images or click to upload'
 };
