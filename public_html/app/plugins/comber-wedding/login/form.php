@@ -32,7 +32,7 @@ function comber_login_form_fields() {
         <label for="comber_user_pass">Password</label>
         <input name="comber_user_pass" id="comber_user_pass" class="required" type="password"/>
         <input class="button radius" id="comber_login_submit" type="submit" value="Login"/>
-        <p><a class="forgotton-password" href="/forgotten-password">Forgotton Password?</a></p>
+        <!--<p><a class="forgotton-password" href="/forgotten-password">Forgotton Password?</a></p>-->
         <input type="hidden" name="comber_login_nonce" value="<?php echo wp_create_nonce('comber-login-nonce'); ?>"/>
         <input type="hidden" name="current_page" value="<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>" />
 
