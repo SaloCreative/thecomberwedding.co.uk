@@ -26,7 +26,7 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
         </div>
         <div class="large-4 columns">
             <div class="panel" data-equalizer-watch>
-                <? the_field('sidebar'); ?>
+                <?php the_field('sidebar'); ?>
             </div>
         </div>
     </section>
