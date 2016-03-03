@@ -12,11 +12,11 @@ $domain = "mg.thecomberwedding.co.uk";
 require('inviteEmailTemplate.php');
 
 # Make the call to the client.
-/*$result = $mgClient->sendMessage($domain, array(
+$result = $mgClient->sendMessage($domain, array(
     'from'    => 'Lotte & Rich Comber <invites@thecomberwedding.co.uk>',
     'to'      => $email,
     'subject' => 'You are invited to our Wedding!',
     'html'    => '<html>
 		'.$messageInviteOutput.'
 	</html>'
-));*/
+));

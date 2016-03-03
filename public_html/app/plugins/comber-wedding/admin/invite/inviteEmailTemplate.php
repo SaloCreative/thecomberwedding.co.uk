@@ -88,5 +88,3 @@ $messageInviteOutput = '
     </table></td>
   </tr>
 </table>';
-
-echo '<html>'.$messageInviteOutput.'</html>';

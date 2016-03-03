@@ -21,7 +21,7 @@ if (!empty($_POST['inviteNonce']) && !empty($_POST['userId']) && !empty($_POST['
     //Mark in DB that all invites are sent
     require('invite/invitesSent.php');
     //return success
-    //header( 'Location: /admin-area?alert=true&success=invites');
+    header( 'Location: /admin-area?alert=true&success=invites');
 }
 else {
     header( 'Location: /admin-area?alert=true&failed=identify');

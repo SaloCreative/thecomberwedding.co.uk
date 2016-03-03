@@ -132,6 +132,12 @@ ul.main-navigation {
   }
 }
 
+#menuTrigger {
+  display: none;
+}
+#menu-wrapper {
+  float: right;
+}
 @media only screen and (max-width: 930px) {
   ul.main-navigation {
       margin-left: 20px;
@@ -174,6 +180,11 @@ ul.main-navigation {
     }
   }
 }
+@media only screen and (min-width: 642px) {
+  #navigation {
+    display: block !important;
+  }
+}
 @media only screen and (max-width: 641px) {
   ul.main-navigation {
     margin-left: 40px;
@@ -186,6 +197,62 @@ ul.main-navigation {
     padding-bottom: 25px;
     margin: 0 auto;
     display: block;
+  }
+  #navigation {
+    display: none;
+  }
+  #menu-wrapper {
+    .panel {
+      padding: 0;
+      transition: all 0.3s linear;
+    }
+    &.active {
+      .panel {
+        padding: 20px;
+      }
+    }
+  }
+  #menuTrigger {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 0px;
+    cursor: pointer;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px solid #eaeaea;
+    line-height: 40px;
+    transition: all 0.3s linear;
+    &.active {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eaeaea;
+      height: 60px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    &::after {
+      content: '\f169';
+      font-family: 'foundation-icons';
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      text-decoration: inherit;
+      position: absolute;
+      background: $primary-color;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      text-align: center;
+    }
   }
 }
 @media only screen and (max-width: 560px) {
@@ -203,6 +270,17 @@ ul.main-navigation {
         max-width: none;
         margin-left: -280px;
       }
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  ul.main-navigation {
+    margin-left: 20px;
+  }
+  #menuTrigger {
+    &.active {
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 }

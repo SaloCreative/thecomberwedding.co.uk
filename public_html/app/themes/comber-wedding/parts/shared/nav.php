@@ -1,3 +1,4 @@
+<div id="menuTrigger">Menu</div>
 <nav id="navigation">
 	<ul class="main-navigation">
 		<?php

@@ -8,6 +8,11 @@ if (has_post_thumbnail( $post->ID ) ):
 endif;?>
 <div id="body-wrapper" class="row">
     <div id="masthead" data-equalizer>
+        <div id="menu-wrapper" class="medium-4 columns">
+            <div class="panel" data-equalizer-watch>
+                <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/nav') ); ?>
+            </div>
+        </div>
         <div class="medium-8 columns intro-image">
             <div class="panel" data-equalizer-watch>
                 <?= $featured_image; ?>
@@ -17,11 +22,6 @@ endif;?>
                     <p class="date">Saturday 4th June 2016</p>
                     <p class="local">2pm at The Sandbanks Hotel</p>
                 </div>
-            </div>
-        </div>
-        <div class="medium-4 columns">
-            <div class="panel" data-equalizer-watch>
-                <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/nav') ); ?>
             </div>
         </div>
     </div>
