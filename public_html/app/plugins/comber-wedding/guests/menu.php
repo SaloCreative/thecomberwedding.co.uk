@@ -1,7 +1,7 @@
 <div id="myMenu" class="reveal-modal" data-reveal aria-labelledby="Menu" aria-hidden="true" role="dialog">
     <div class="row">
         <div class="row">
-            <div class="columns medium-4">
+            <div class="columns large-4">
                 <h3>Starter</h3>
                 <h6>In House Hot Smoked Salmon</h6>
                 <p>served chilled with avocado puree, ripe mango &amp; sakura micro herbs</p>
@@ -12,7 +12,7 @@
                 <h6>Roasted Vegetable Terrine</h6>
                 <p>with buffalo mozzarella &amp; basil pesto</p>
             </div>
-            <div class="columns medium-4">
+            <div class="columns large-4">
                 <h3>Main</h3>
                 <h6>Confit Duck leg</h6>
                 <p>gratin dauphinoise, carrot &amp; cardamom puree, green beans &amp; red wine sauce</p>
@@ -23,7 +23,7 @@
                 <h6>Spinach &amp; Ricotta Tortellini</h6>
                 <p>with wild Mushroom Cream, Rocket &amp; Parmesan</p>
             </div>
-            <div class="columns medium-4">
+            <div class="columns large-4">
                 <h3>Dessert</h3>
                 <h6>American Style Baked Cheesecake</h6>
                 <p>with bramley apple puree &amp; brown sugared pecans</p>

@@ -1,6 +1,6 @@
 <?php
 try {
-    $data = $ftoDB->query('SELECT * FROM guests_group WHERE id = 1');
+    $data = $ftoDB->query('SELECT * FROM guests_group');
     //Check there are guests
     if ($data->rowCount() > 0) {
         $guests = array();

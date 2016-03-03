@@ -25,7 +25,7 @@ $messageInviteOutput = '
   <tr>
     <td><table width="609" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="609"><a href="http://www.fruit2office.co.uk/" target="_blank"><img src="http://local.thecomberwedding.co.uk/Email/header.jpg" alt="Fruit2Office" width="609" border="0" style="display:block" /></a></td>
+        <td width="609"><a href="http://www.thecomberwedding.co.uk/" target="_blank"><img src="http://www.thecomberwedding.co.uk/Email/header.jpg" alt="The Comber Wedding" width="609" border="0" style="display:block" /></a></td>
       </tr>
     </table></td>
   </tr>

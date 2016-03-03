@@ -15,3 +15,10 @@
   line-height: 33px;
   color:#fff;
 }
+
+@media only screen and (max-width: 641px) {
+  .reveal-modal .close-reveal-modal {
+    right: 0;
+    top: 0;
+  }
+}
