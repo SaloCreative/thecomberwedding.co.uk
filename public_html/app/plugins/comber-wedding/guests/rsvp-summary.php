@@ -25,5 +25,5 @@
             <?php endif; ?>
         </div>
     <?php } ?>
-    <a class="button" href="#" data-reveal-id="myRSVP">Edit RSVP</a>
+    <?php //<a class="button" href="#" data-reveal-id="myRSVP">Edit RSVP</a> ?>
 </div>

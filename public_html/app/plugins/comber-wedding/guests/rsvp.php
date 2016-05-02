@@ -23,12 +23,14 @@ function comber_rsvp_form_build() {
             <div class="guests row">
                 <?php if($groupResponse == 1) {
                     require_once('rsvp-summary.php'); ?>
+                    <?php /*
                     <div id="myRSVP" class="reveal-modal" data-reveal aria-labelledby="RSVP" aria-hidden="true" role="dialog">
                         <h2 id="modalTitle">Change RSVP/Menu Choices</h2>
                         <p class="lead">You can change your meal choices up until the 23rd April.</p>
                         <?php require_once('rsvp-form.php'); ?>
                         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                     </div>
+                    */ ?>
                 <?php
                 } else {
                     require_once('rsvp-form.php');
