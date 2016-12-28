@@ -115,7 +115,7 @@
 
   min-height: 500px;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,1);
   padding: 20px 20px;
 
   &.dz-started {
@@ -351,7 +351,7 @@
 
       .dz-upload {
         background: #333;
-        background: linear-gradient(to bottom, #666, #444);
+        background: linear-gradient(to bottom, scale-color($primary-color, $lightness: 45%), $primary-color);
         position: absolute;
         top: 0;
         left: 0;

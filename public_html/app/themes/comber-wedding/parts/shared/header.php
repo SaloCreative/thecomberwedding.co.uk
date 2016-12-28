@@ -17,7 +17,7 @@ endif;?>
             <div class="panel" data-equalizer-watch>
                 <?= $featured_image; ?>
                 <div class="header-wrapper">
-                    <p class="intro">You are invited to...</p>
+                    <p class="intro">Thanks for coming to...</p>
                     <h1>The Comber Wedding!</h1>
                     <p class="date">Saturday 4th June 2016</p>
                     <p class="local">2pm at The Sandbanks Hotel</p>
