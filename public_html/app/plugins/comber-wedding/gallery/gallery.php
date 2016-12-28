@@ -14,7 +14,7 @@ add_shortcode('gallery_upload', 'comber_gallery_upload');
 
 function comber_gallery_upload_build() {
     ob_start(); ?>
-    <a href="#" class="button" data-reveal-id="myGallery">Upload Images</a>
+    <a href="#" class="button gallery-upload-btn" data-reveal-id="myGallery">Upload Images</a>
     <div id="myGallery" class="reveal-modal" data-reveal aria-labelledby="Gallery Upload" aria-hidden="true" role="dialog">
         <?php require_once('uploadForm.php'); ?>
         <a class="close-reveal-modal" aria-label="Close">&#215;</a>
@@ -46,6 +46,12 @@ function comber_galleries_view_build() {
         $html .= '<p class="title">'.$userGallery->name.'</p>';
         $html .= '</div></div>';
     }
+    $html .= '<div class="column medium-4 gallery-image upload-images-tile">
+        <a href="#" data-reveal-id="myGallery"></a>
+        <div class="gall-thumb-inner">
+            <p class="title">Upload your images</p>
+        </div>
+    </div>';
     $html .= '</div>';
     return $html;
 }
