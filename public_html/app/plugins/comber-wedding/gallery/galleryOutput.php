@@ -39,7 +39,8 @@ class Gallery
      */
     public function returnAlbumContents($id)
     {
-        $html = '<div class="row">';
+        $html = '<h1 style="padding-bottom: 20px;">Photos by '.$userGallery = $this->getAlbumDetails($id)->name.'</h1>';
+        $html .= '<div class="row">';
         foreach ($this->getAlbumImages($id) as $image) {
             $title = '';
             if(file_exists($_SERVER['DOCUMENT_ROOT'].'assets/originals/' . $image['image'])) {
