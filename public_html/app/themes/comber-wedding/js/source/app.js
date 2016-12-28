@@ -52,7 +52,11 @@ $( document ).ready(function() {
         $(document).foundation('equalizer', 'reflow');
     });
 
-    $("a.lightbox").fancybox();
+    $("a.lightbox").fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        }
+    });
 
 });
 

@@ -41,8 +41,12 @@ class Gallery
     {
         $html = '<div class="row">';
         foreach ($this->getAlbumImages($id) as $image) {
+            $title = '';
+            if(file_exists($_SERVER['DOCUMENT_ROOT'].'assets/originals/' . $image['image'])) {
+                $title = 'caption="<a style=\'color: #fff\' href=\'/assets/originals/' . $image['image'] . '\' download>Download Hi-Res Version</a>"';
+            }
             $html .= '<div class="column medium-4 gallery-image inner-gallery-lightbox">';
-            $html .= '<a class="lightbox" rel="gallery" href="/assets/gallery/' . $image['image'] . '"></a>';
+            $html .= '<a class="lightbox" rel="gallery" href="/assets/gallery/' . $image['image'] . '" '.$title.'></a>';
             $html .= '<div class="gall-thumb-inner" style="background-image: url(\'/assets/thumbs/' . $image['image'] . '\')">';
             $html .= '</div></div>';
         }
