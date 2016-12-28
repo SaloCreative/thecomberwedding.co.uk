@@ -83,11 +83,27 @@ class Gallery
         $album = new stdClass();
         $details = $this->getUserDetails($id);
         $thumbnail = $this->getGalleryThumbnail($id);
+        $meta = $this->getUserMeta($id);
         $album->id = $id;
-        $album->name = $details['name'];
+        if(!empty($meta)) {
+            $album->name = $meta['label'];
+        } else {
+            $album->name = $details['name'];
+        }
         $album->group_id = $details['id'];
         $album->thumbnail = $thumbnail["image"];
         return $album;
+    }
+
+    /*
+     * Get the user meta if it exists
+     */
+    private function getUserMeta($id)
+    {
+        $getUser = $this->ftoDB->prepare('SELECT label FROM gallery_meta WHERE userID = ' . $id);
+        $getUser->execute();
+        $user = $getUser->fetch();
+        return $user;
     }
 
     /*
