@@ -111,4 +111,11 @@
       }
     }
   }
+  &.inner-gallery-lightbox {
+    .gall-thumb-inner {
+      &:before {
+        content: 'Enlarge/Download Image';
+      }
+    }
+  }
 }

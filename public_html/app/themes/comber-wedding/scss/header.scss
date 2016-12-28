@@ -19,7 +19,8 @@ ul.main-navigation {
         background-image: url(../images/gallery.png);
       }
       &:hover,
-      &.current-menu-item{
+      &.current-menu-item,
+      &.current-page-ancestor {
         a {
           background-image: url(../images/gallery-hov.png);
         }
@@ -41,7 +42,8 @@ ul.main-navigation {
         background-image: url(../images/music.png);
       }
       &:hover,
-      &.current-menu-item{
+      &.current-menu-item,
+      &.current-page-ancestor{
         a {
           background-image: url(../images/music-hov.png);
         }

@@ -52,6 +52,8 @@ $( document ).ready(function() {
         $(document).foundation('equalizer', 'reflow');
     });
 
+    $("a.lightbox").fancybox();
+
 });
 
 var maxImageWidth = 6000,

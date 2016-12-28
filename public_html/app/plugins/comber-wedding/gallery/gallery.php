@@ -37,21 +37,23 @@ add_shortcode('galleries', 'comber_galleries_view');
 
 function comber_galleries_view_build() {
     require_once(__DIR__.'/galleryOutput.php');
-    $html = '<div class="row">';
-    foreach($gallery->returnAllAlbumIDs() as $album) {
-        $userGallery = $gallery->getAlbumDetails($album);
-        $html .= '<div class="column medium-4 gallery-image">';
-        $html .= '<a href="/album/?albumid='.$userGallery->id.'"></a>';
-        $html .= '<div class="gall-thumb-inner" style="background-image: url(\'/assets/thumbs/'.$userGallery->thumbnail.'\')">';
-        $html .= '<p class="title">'.$userGallery->name.'</p>';
-        $html .= '</div></div>';
+    return $gallery->returnAlbumList();
+}
+
+//Build the gallery output
+function comber_gallery_view() {
+    if(is_user_logged_in()) {
+        $output = comber_gallery_view_build();
+    } else {
+        // could show some logged in user info here
+        $output = '<p>You need to log in!</p>';
     }
-    $html .= '<div class="column medium-4 gallery-image upload-images-tile">
-        <a href="#" data-reveal-id="myGallery"></a>
-        <div class="gall-thumb-inner">
-            <p class="title">Upload your images</p>
-        </div>
-    </div>';
-    $html .= '</div>';
-    return $html;
+    return $output;
+}
+add_shortcode('album_contents', 'comber_gallery_view');
+
+function comber_gallery_view_build() {
+    require_once(__DIR__.'/galleryOutput.php');
+    $id = intval($_GET['albumid']);
+    return $gallery->returnAlbumContents($id);
 }
